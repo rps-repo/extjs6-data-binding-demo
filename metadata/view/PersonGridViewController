@@ -1,0 +1,61 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "persongrid",
+        "designer|userClassName": "PersonGridViewController"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "designerId": "9e046d50-c0c6-4be0-8d36-3e378d571459",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "onGridButton",
+                "implHandler": [
+                    "",
+                    "var itemId = button.getItemId(),",
+                    "            vm = this.getView().up('#mainPanel').getViewModel(),",
+                    "            store = vm.getStore('persons'),",
+                    "            record;",
+                    "        if (itemId === 'add') {",
+                    "            record = store.insert(0, {})[0];",
+                    "            vm.set('currentPerson', record);",
+                    "        }",
+                    "        if (itemId === 'reject') {",
+                    "            store.rejectChanges();",
+                    "        }",
+                    "        if (itemId === 'commit') {",
+                    "            store.commitChanges();",
+                    "            record = vm.get('currentPerson');",
+                    "            record.commit();",
+                    "            record.reject();",
+                    "        }",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "onGridButton",
+            "designerId": "9f1aae93-4253-4ae7-8789-4997d67612b9"
+        }
+    ]
+}

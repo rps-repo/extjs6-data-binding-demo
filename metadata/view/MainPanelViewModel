@@ -1,0 +1,204 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": [
+            "{currentPerson:null}"
+        ],
+        "designer|userAlias": "mainpanel",
+        "designer|userClassName": "MainPanelViewModel"
+    },
+    "configAlternates": {
+        "data": "object",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "designerId": "913b2247-2769-46bc-85f8-9de0c7165019",
+    "cn": [
+        {
+            "type": "Ext.data.Store",
+            "reference": {
+                "name": "stores",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "autoLoad": null,
+                "data": [
+                    "[{",
+                    "                id: 1,",
+                    "                fname: \"John\",",
+                    "                lname: \"Lennon\",",
+                    "                age: 74",
+                    "            }, {",
+                    "                id: 2,",
+                    "                fname: \"Paul\",",
+                    "                lname: \"McCartney\",",
+                    "                age: 72",
+                    "            }, {",
+                    "                id: 3,",
+                    "                fname: \"George\",",
+                    "                lname: \"Harrison\",",
+                    "                age: 71",
+                    "            }, {",
+                    "                id: 4,",
+                    "                fname: \"Ringo\",",
+                    "                lname: \"Starr\",",
+                    "                age: 74",
+                    "            }]"
+                ],
+                "model": "Person",
+                "name": "persons"
+            },
+            "configAlternates": {
+                "autoLoad": "boolean",
+                "data": "array",
+                "model": "model",
+                "name": "string"
+            },
+            "name": "MyStore",
+            "designerId": "e0c2a983-5f5e-4693-8be0-1fcef41947a7",
+            "cn": [
+                {
+                    "type": "basicfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "isDirty",
+                        "implHandler": [
+                            "                var b = this.getModifiedRecords().length;",
+                            "                b = b || this.getNewRecords().length;",
+                            "                b = b || this.getRemovedRecords().length;",
+                            "                return !!b;"
+                        ]
+                    },
+                    "configAlternates": {
+                        "fn": "string",
+                        "implHandler": "code"
+                    },
+                    "name": "isDirty",
+                    "designerId": "994e9b35-9046-4501-a708-b13f394cc22f"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.ChainedStore",
+            "reference": {
+                "name": "stores",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "personsChained",
+                "source": "{persons}"
+            },
+            "configAlternates": {
+                "name": "string",
+                "source": "store"
+            },
+            "name": "MyChainedStore",
+            "designerId": "c495c6d8-4c70-48a4-b7ac-4cd10e58e06b"
+        },
+        {
+            "type": "Ext.app.bind.Formula",
+            "reference": {
+                "name": "formulas",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bind": [
+                    "{                bindTo: \"{currentPerson}\",",
+                    "                deep: true}"
+                ],
+                "name": "dirty"
+            },
+            "configAlternates": {
+                "bind": "object",
+                "name": "string"
+            },
+            "name": "MyFormula",
+            "designerId": "becc6841-00f8-4afc-baef-78adf8a775c9",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "data"
+                        ],
+                        "fn": "get",
+                        "implHandler": [
+                            "return data ? data.dirty : false;"
+                        ]
+                    },
+                    "configAlternates": {
+                        "designer|params": "typedarray",
+                        "fn": "string",
+                        "implHandler": "code"
+                    },
+                    "name": "get",
+                    "designerId": "95c83728-ac49-48f5-ad39-a890c4520c87"
+                }
+            ]
+        },
+        {
+            "type": "Ext.app.bind.Formula",
+            "reference": {
+                "name": "formulas",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bind": [
+                    "{                bindTo: \"{currentPerson}\",",
+                    "                deep: true}"
+                ],
+                "name": "storeDirty"
+            },
+            "configAlternates": {
+                "bind": "object",
+                "name": "string"
+            },
+            "name": "MyFormula1",
+            "designerId": "c2d6347e-8686-4b22-9669-d110916c826e",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "data"
+                        ],
+                        "fn": "get",
+                        "implHandler": [
+                            "return this.getStore('persons').isDirty();"
+                        ]
+                    },
+                    "configAlternates": {
+                        "designer|params": "typedarray",
+                        "fn": "string",
+                        "implHandler": "code"
+                    },
+                    "name": "get",
+                    "designerId": "a26e238c-2076-4754-9efa-f2fd9501a3a6"
+                }
+            ]
+        }
+    ]
+}

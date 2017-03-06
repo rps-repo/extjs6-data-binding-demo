@@ -1,0 +1,219 @@
+{
+    "type": "Ext.grid.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "currentPerson": [
+            "{currentPerson}"
+        ],
+        "designer|userAlias": "persongrid",
+        "designer|userClassName": "PersonGrid",
+        "header": [
+            "{        title: \"Person Grid\",",
+            "        padding: \"4 9 5 9\",",
+            "        items: [{",
+            "            text: \"New\",",
+            "            xtype: \"button\",",
+            "            itemId: \"add\",",
+            "            glyph: 61543,",
+            "            handler: \"onGridButton\"",
+            "        }, {",
+            "            tooltip: \"Reject All\",",
+            "            xtype: \"button\",",
+            "            itemId: \"reject\",",
+            "            handler: \"onGridButton\",",
+            "            disabled: true,",
+            "            bind: {",
+            "                disabled: \"{!storeDirty}\"",
+            "            },",
+            "            glyph: 61666,",
+            "            margin: \"0 0 0 5\"",
+            "        }, {",
+            "            tooltip: \"Commit All\",",
+            "            xtype: \"button\",",
+            "            itemId: \"commit\",",
+            "            handler: \"onGridButton\",",
+            "            disabled: true,",
+            "            bind: {",
+            "                disabled: \"{!storeDirty}\"",
+            "            },",
+            "            glyph: 61452,",
+            "            margin: \"0 0 0 5\"",
+            "        }]}"
+        ],
+        "publishes": [
+            "[\"currentPerson\"]"
+        ],
+        "store": [
+            "{persons}"
+        ],
+        "title": [
+            "<b>{currentPerson.name}</b>"
+        ]
+    },
+    "configAlternates": {
+        "store": "binding",
+        "title": "binding",
+        "currentPerson": "binding",
+        "header": "object",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "publishes": "object"
+    },
+    "name": "MyGridPanel",
+    "designerId": "578f114c-3a95-4b16-8c26-aecab1f98a18",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "currentPerson",
+            "type": "string"
+        }
+    ],
+    "viewControllerInstanceId": "9e046d50-c0c6-4be0-8d36-3e378d571459",
+    "viewModelInstanceId": "677eefae-aad9-4add-b8d9-466e8febece7",
+    "cn": [
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "fname",
+                "flex": 1,
+                "text": "First Name"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "flex": "number",
+                "text": "string"
+            },
+            "name": "MyColumn",
+            "designerId": "ebbe9418-76a4-4abc-be2f-0a90635560c9",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "editor",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyTextField",
+                    "designerId": "1013a034-9343-4d75-bb75-841f60fdbe6e"
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "lname",
+                "flex": 1,
+                "text": "Last Name"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "flex": "number"
+            },
+            "name": "MyColumn1",
+            "designerId": "776d9cd0-5f5f-4f59-aa65-de02b094f9ee",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "editor",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyTextField1",
+                    "designerId": "c9be61d0-4342-4be4-8231-1c56f420c671"
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "age",
+                "flex": 1,
+                "text": "Age"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "flex": "number"
+            },
+            "name": "MyColumn2",
+            "designerId": "15e055d2-e791-4966-be16-037e36a32619",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Number",
+                    "reference": {
+                        "name": "editor",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyNumberField",
+                    "designerId": "5efcbebb-0a6e-4997-a3ba-3b1089d2c2ff"
+                }
+            ]
+        },
+        {
+            "type": "Ext.view.Table",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyTable",
+            "designerId": "1ec945d0-dc55-4a63-b00e-920d1d408879"
+        },
+        {
+            "type": "Ext.grid.plugin.CellEditing",
+            "reference": {
+                "name": "plugins",
+                "type": "array"
+            },
+            "codeClass": null,
+            "name": "MyCellEditingPlugin",
+            "designerId": "fa1e35f1-6317-41f1-932d-a63bf24110e7"
+        },
+        {
+            "type": "viewcontrollereventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onGridpanelSelect",
+                "implHandler": [
+                    "this.getView().setCurrentPerson(record);"
+                ],
+                "name": "select",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onGridpanelSelect",
+            "designerId": "6d43c72d-7bfa-4039-9237-88cd65dead57"
+        }
+    ]
+}

@@ -1,0 +1,188 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "stretch",
+        "designer|initialView": true,
+        "designer|uiInterfaceName": "default-framed",
+        "designer|userAlias": "mainpanel",
+        "designer|userClassName": "MainPanel",
+        "frame": true,
+        "glyph": 61675,
+        "height": 600,
+        "itemId": "mainPanel",
+        "layout": "hbox",
+        "title": "ExtJS 6 MVVM Data Binding Example",
+        "width": null
+    },
+    "configAlternates": {
+        "container|align": "string",
+        "designer|initialView": "boolean",
+        "designer|uiInterfaceName": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "frame": "boolean",
+        "glyph": "auto",
+        "height": "auto",
+        "itemId": "string",
+        "layout": "string",
+        "title": "string",
+        "width": "auto"
+    },
+    "name": "MyPanel",
+    "designerId": "0601cf9e-cf49-4b0f-8cc1-97b637d84b1b",
+    "viewControllerInstanceId": "2829007b-77f0-4a4f-9a01-e86aae03624a",
+    "viewModelInstanceId": "913b2247-2769-46bc-85f8-9de0c7165019",
+    "cn": [
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "stretch",
+                "defaults": [
+                    "{            flex: 1,",
+                    "            margin: 5,",
+                    "            border: true}"
+                ],
+                "layout": "vbox",
+                "layout|flex": 1
+            },
+            "configAlternates": {
+                "container|align": "string",
+                "defaults": "object",
+                "layout": "string",
+                "layout|flex": "number"
+            },
+            "name": "MyContainer",
+            "designerId": "d1e889af-1142-4be2-9a12-5b0464501c0b",
+            "cn": [
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "glyph": 61646,
+                        "layout|flex": 1
+                    },
+                    "configAlternates": {
+                        "glyph": "auto",
+                        "layout|flex": "number"
+                    },
+                    "name": "PersonGrid",
+                    "designerId": "74e30114-a6c3-433e-9704-fab11dd13f30",
+                    "masterInstanceId": "578f114c-3a95-4b16-8c26-aecab1f98a18"
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "glyph": 61449,
+                        "layout|flex": 1,
+                        "title": "DataView"
+                    },
+                    "configAlternates": {
+                        "glyph": "auto",
+                        "layout|flex": "number",
+                        "title": "string"
+                    },
+                    "name": "MyPanel",
+                    "designerId": "7a091bcc-633a-49f0-a861-8a26340ce7aa",
+                    "cn": [
+                        {
+                            "type": "linkedinstance",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "name": "PersonView",
+                            "designerId": "c2faf0a2-58f1-4844-bbd2-597775a0aa7b",
+                            "masterInstanceId": "62f96bbd-0498-474d-9d01-dd36fb4d6d58"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "stretch",
+                "defaults": [
+                    "{            flex: 1,",
+                    "            margin: 5,",
+                    "            border: true}"
+                ],
+                "layout": "vbox",
+                "layout|flex": 1
+            },
+            "configAlternates": {
+                "container|align": "string",
+                "defaults": "object",
+                "layout": "string",
+                "layout|flex": "number"
+            },
+            "name": "MyContainer1",
+            "designerId": "d483c302-85cb-4a79-b0f5-3c606870ecc2",
+            "cn": [
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "glyph": 61508,
+                        "layout|flex": 1
+                    },
+                    "configAlternates": {
+                        "glyph": "auto",
+                        "layout|flex": "number"
+                    },
+                    "name": "PersonForm",
+                    "designerId": "23ee3ece-cffe-45bd-ac95-c0080bdde7de",
+                    "masterInstanceId": "ccf81f7b-b658-4e96-8408-07b3fe660ae1"
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1,
+                        "title": "Data Panel"
+                    },
+                    "configAlternates": {
+                        "layout|flex": "number",
+                        "title": "string"
+                    },
+                    "name": "PersonPanel",
+                    "designerId": "60798131-158b-4d4a-aeb6-373a94ccfe77",
+                    "masterInstanceId": "ce148215-3b56-4871-891d-1d035eaf97ef"
+                }
+            ]
+        }
+    ]
+}

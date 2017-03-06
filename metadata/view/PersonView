@@ -1,0 +1,115 @@
+{
+    "type": "Ext.view.View",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "border": true,
+        "currentPerson": [
+            "{currentPerson}"
+        ],
+        "designer|userAlias": "personview",
+        "designer|userClassName": "PersonView",
+        "itemSelector": "div.person-item",
+        "publishes": [
+            "[\"currentPerson\"]"
+        ],
+        "selectedItemCls": "selected",
+        "store": [
+            "{personsChained}"
+        ]
+    },
+    "configAlternates": {
+        "store": "binding",
+        "currentPerson": "binding",
+        "border": "auto",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "itemSelector": "string",
+        "publishes": "object",
+        "selectedItemCls": "string"
+    },
+    "name": "MyView",
+    "designerId": "62f96bbd-0498-474d-9d01-dd36fb4d6d58",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "currentPerson",
+            "type": "string"
+        }
+    ],
+    "viewControllerInstanceId": "e16084d8-8ce1-463a-844a-8421cccc92a6",
+    "viewModelInstanceId": "a4894bbe-9f1e-46f2-b7f1-c22c9cc9975a",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "itemTpl",
+                "implHandler": [
+                    "<div class=\"person-item\"><strong>{fname} {lname}</strong> ({age})</div>"
+                ]
+            },
+            "configAlternates": {
+                "designer|displayName": "string",
+                "implHandler": "code"
+            },
+            "name": "itemTpl",
+            "designerId": "74c36c14-7f98-4e70-95ac-dc7c0406a26a"
+        },
+        {
+            "type": "viewcontrollereventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onDataviewSelect",
+                "implHandler": [
+                    "this.getView().setCurrentPerson(record);"
+                ],
+                "name": "select",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onDataviewSelect",
+            "designerId": "9b1a986c-0c28-4547-a066-2afe0aa4884b"
+        },
+        {
+            "type": "viewcontrollereventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onDataviewBeforeContainerClick",
+                "implHandler": [
+                    "return false;"
+                ],
+                "name": "beforecontainerclick",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onDataviewBeforeContainerClick",
+            "designerId": "a5678ede-e18a-4367-a915-557f9a77b7b0"
+        }
+    ]
+}

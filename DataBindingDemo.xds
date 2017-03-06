@@ -1,0 +1,64 @@
+{
+    "name": "DataBindingDemo",
+    "settings": {
+        "cmd": {
+            "license": "commercial",
+            "cmdVersion": "6.2.1.29",
+            "frameworkVersion": "6.2.1.167"
+        },
+        "urlPrefixTemplate": "http://localhost:{port}/{path}",
+        "urlPrefix": "http://localhost:62522/",
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "exportPath": "",
+        "spacesToIndent": 4,
+        "sdkPath": "",
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true
+    },
+    "xdsVersion": "4.1.1",
+    "xdsBuild": 123,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "ext62",
+    "viewOrderMap": {
+        "view": [
+            "0601cf9e-cf49-4b0f-8cc1-97b637d84b1b",
+            "913b2247-2769-46bc-85f8-9de0c7165019",
+            "2829007b-77f0-4a4f-9a01-e86aae03624a",
+            "578f114c-3a95-4b16-8c26-aecab1f98a18",
+            "677eefae-aad9-4add-b8d9-466e8febece7",
+            "9e046d50-c0c6-4be0-8d36-3e378d571459",
+            "ccf81f7b-b658-4e96-8408-07b3fe660ae1",
+            "05339b4f-338b-4955-8bc6-196e7dcc9d94",
+            "48e816c0-4e83-421e-8395-b55afa3009a2",
+            "62f96bbd-0498-474d-9d01-dd36fb4d6d58",
+            "a4894bbe-9f1e-46f2-b7f1-c22c9cc9975a",
+            "e16084d8-8ce1-463a-844a-8421cccc92a6",
+            "ce148215-3b56-4871-891d-1d035eaf97ef",
+            "c7e776fb-6afd-407d-bd65-e36a75272cfa",
+            "fd1857f4-468a-4900-956a-a6f222dda9fc"
+        ],
+        "store": [],
+        "controller": [],
+        "model": [
+            "9c6b43d6-b0d2-4a0f-98c1-e119742f75a4"
+        ],
+        "resource": [
+            "c5ac3379-8dd7-449b-b660-b3a61f14b34e",
+            "3e2dd3dd-4eab-4335-a29d-34981a1587a0"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "glyphFontFamily": "FontAwesome",
+        "models": [
+            "Person"
+        ],
+        "name": "DataBindingDemo",
+        "views": [
+            "MainPanel",
+            "PersonGrid",
+            "PersonForm",
+            "PersonView",
+            "PersonPanel"
+        ]
+    },
+    "configAlternates": {
+        "glyphFontFamily": "string",
+        "models": "typedarray",
+        "name": "string",
+        "views": "typedarray"
+    },
+    "name": "Application",
+    "designerId": "application"
+}

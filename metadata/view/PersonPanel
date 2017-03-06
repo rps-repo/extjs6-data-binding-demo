@@ -1,0 +1,57 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": [
+            "{currentPerson}"
+        ],
+        "designer|userAlias": "personpanel",
+        "designer|userClassName": "PersonPanel",
+        "glyph": 61686,
+        "title": [
+            "<b>{currentPerson.name}</b>"
+        ]
+    },
+    "configAlternates": {
+        "title": "binding",
+        "data": "binding",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "glyph": "auto"
+    },
+    "name": "MyPanel1",
+    "designerId": "ce148215-3b56-4871-891d-1d035eaf97ef",
+    "configMeta": {
+        "data": {
+            "bindDeep": true
+        }
+    },
+    "viewControllerInstanceId": "fd1857f4-468a-4900-956a-a6f222dda9fc",
+    "viewModelInstanceId": "c7e776fb-6afd-407d-bd65-e36a75272cfa",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "tpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "tpl",
+                "implHandler": [
+                    "<table><tr><td>First Name:</td><td><strong>{fname}</strong></td></tr><tr><td>Last Name:</td><td><strong>{lname}</strong></td></tr><tr><td>Age:</td><td><strong>{age}</strong></td></tr></table>"
+                ]
+            },
+            "configAlternates": {
+                "designer|displayName": "string",
+                "implHandler": "code"
+            },
+            "name": "tpl",
+            "designerId": "3a9984c9-24ed-4736-a23f-df0c11e50414"
+        }
+    ]
+}

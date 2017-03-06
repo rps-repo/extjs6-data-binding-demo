@@ -1,0 +1,53 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "personform",
+        "designer|userClassName": "PersonFormViewController"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "designerId": "48e816c0-4e83-421e-8395-b55afa3009a2",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "onFormButton",
+                "implHandler": [
+                    "        var itemId = button.getItemId(),",
+                    "            cp = this.getView().up('#mainPanel').getViewModel().get('currentPerson');",
+                    "        if (cp && cp.isModel) {",
+                    "            if (itemId === \"reject\") {",
+                    "                cp.reject();",
+                    "            }",
+                    "            if (itemId === \"commit\") {",
+                    "                cp.commit();",
+                    "                cp.reject();",
+                    "            }",
+                    "        }"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "onFormButton",
+            "designerId": "067df95c-eae0-4a0e-b494-f91b7a9593d7"
+        }
+    ]
+}
